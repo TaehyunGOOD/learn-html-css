@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>picture, source 요소</title>
+  </head>
+  <body>
+    <!-- srcset, sizes 속성 -->
+    <img
+      srcset="
+        /src/assets/logo/netflix@1x.png 1x,
+        /src/assets/logo/netflix@2x.png 2x
+      "
+      src="/src/assets/logo/netflix@1x.png"
+      alt="넷플릭스"
+    />
+    <br />
+    <!-- 이미지 형식 -->
+    <img
+      src="/src/assets/logo/netflix@1x.png"
+      srcset="/src/assets/logo/netflix@1x.webp"
+      alt=""
+    />
+    <h2>W Descriptor 예시</h2>
+    <!--picture는 img 를 닮기위한 컨테이너임
+    figure>picture>img-->
+    <picture>
+      <!-- 뒤에 width 값 이하까지 해당 이미지로 표시 -->
+      <!-- portrait 세로보기, leandscape 가로보기 -->
+      <!-- source 직접 해보기 -->
+      <source
+        srcset="/src/assets/rwd/small-550.jpg 550w"
+        media="(max-width: 500px)"
+      />
+      <source
+        srcset="/src/assets/rwd/medium-1024.jpg 1024w"
+        media="(max-width: 768px)"
+      />
+      <source
+        srcset="/src/assets/rwd/large-1600.jpg 1600w"
+        media="(max-width: 1280px)"
+      />
+
+      <img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+    </picture>
+  </body>
+</html>
