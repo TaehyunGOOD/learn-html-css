@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼(인풋)요소</title>
+  </head>
+  <body>
+    <h1>form 관련 요소</h1>
+    <h2>input 요소</h2>
+    <!-- 한 줄 입력 서식 -->
+    <!-- 폼은 컨테이너 역할, 필드셋은 그룹핑할때 씀  -->
+    <!-- camelCase snake_case kebab-case PascalCase -->
+    <form action="/">
+      <fieldset>
+        <legend>폼 서식</legend>
+        <!-- 레이블과 인풋은 같이 무조건 사용함 -->
+        <div>
+          <label for="userName">이름</label>
+          <input type="text" id="userName" />
+        </div>
+        <div>
+          <label for="userPwd">비밀번호</label>
+          <input type="password" id="userPwd" />
+        </div>
+        <div>
+          <label for="likelionSearch">검색</label>
+          <input type="search" id="likelionSearch" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
