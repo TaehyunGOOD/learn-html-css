@@ -1,7 +1,6 @@
-/* Body 요소의 배경색상 지정 */
+/* body 요소의 배경색상 지정 */
 body {
   background-color: yellow;
-  /* 4번째 값은 알파값(투명화) */
-  color: rgba(0 0 255/0.5);
+  color: rgb(0 0 255 /0.5);
   font-family: Arial, Helvetica, sans-serif;
 }
