@@ -1,0 +1,44 @@
+/* CSS 박스모델 */
+/* 박스의 테두리 설정 border */
+/* 안쪽 여백 설정 padding*/
+/* 바깥쪽 여백 설정 -margin */
+/* 박스 사이징 -box-sizing */
+.like {
+  /* box-sizing 쓸시 width 내부에 padding, border 포함시킴 */
+  box-sizing: border-box;
+  /* border-width: 5px;
+  border-style: solid;
+  border-color: green; */
+  border: 5px solid green;
+  /* padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-left: 40px; */
+  padding: 20px;
+  width: 150px;
+  margin: 50px;
+
+  div {
+    background-color: yellow;
+  }
+}
+
+.bootcamp {
+  border: 1px solid purple;
+  padding: 0 100px;
+}
+
+/* inline 요소는 콘텐츠 크기에 따라 크기 결정됌, 크기 설정값 무시 */
+/* inline-block으로 변경시 크기 설정값 적용 가능 */
+.lion {
+  display: block;
+  border: 5px solid red;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.teacher {
+  margin-bottom: 50px;
+  width: 300px;
+  margin-left: -50px;
+}
