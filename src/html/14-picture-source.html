@@ -6,6 +6,8 @@
     <title>picture, source 요소</title>
   </head>
   <body>
+    <h1>반응형 이미지</h1>
+    <h2>X Descriptor 예시</h2>
     <!-- srcset, sizes 속성 -->
     <img
       srcset="
@@ -16,19 +18,18 @@
       alt="넷플릭스"
     />
     <br />
-    <!-- 이미지 형식 -->
+    <!-- 이미지 형식 (webp) -->
     <img
       src="/src/assets/logo/netflix@1x.png"
-      srcset="/src/assets/logo/netflix@1x.webp"
-      alt=""
+      srcset="
+        /src/assets/logo/netflix@1x.webp 1x,
+        /src/assets/logo/netflix@2x.webp 2x
+      "
+      alt="넷플릭스"
     />
+
     <h2>W Descriptor 예시</h2>
-    <!--picture는 img 를 닮기위한 컨테이너임
-    figure>picture>img-->
     <picture>
-      <!-- 뒤에 width 값 이하까지 해당 이미지로 표시 -->
-      <!-- portrait 세로보기, leandscape 가로보기 -->
-      <!-- source 직접 해보기 -->
       <source
         srcset="/src/assets/rwd/small-550.jpg 550w"
         media="(max-width: 500px)"

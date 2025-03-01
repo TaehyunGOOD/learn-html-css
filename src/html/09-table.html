@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>테이블 관련 요소</title>
-    <!-- style 태그 사이에는 CSS 넣을수 있음 -->
     <style>
       table,
       th,
@@ -17,40 +16,44 @@
   </head>
   <body>
     <h1>테이블 관련 요소</h1>
-    <h2>테이블 예제</h2>
-    <table>
-      <thead>
-        <tr>
-          <th id="Study Time">학습시간</th>
-          <td id="Study Time">09:00 ~17:00 (28시간)</td>
-          <th id="difficulty">난이도</th>
-          <td id="difficulty">초급</td>
-        </tr>
-        <tr>
-          <th id="educational-expenses">교육비 지원</th>
-          <td id="educational-expenses">고용보험 비환급</td>
-          <th id="evaluation-items">평가항목</th>
-          <td id="evaluation-items">출석률 100%</td>
-        </tr>
-        <tr>
-          <th>수료기준</th>
-          <td>총점 80점 이상시 수료</td>
-          <th>정원</th>
-          <td>24명</td>
-        </tr>
-        <tr>
-          <th>교재정보</th>
-          <td colspan="3">
-            입문자를 위한 GIT과 HTML&CSS <br />
-            HTML&CSS 웹사이트 개발과 디자인 기초 (35,000원)
-          </td>
-        </tr>
-      </thead>
+    <h2>테이블 얘제</h2>
+    <table class="lecture-table">
+      <caption class="sr-only">
+        입문자를 위한 Git과 HTML&CSS 과정
+        <span
+          >학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보
+          등을 나타낸 표</span
+        >
+      </caption>
+      <tr>
+        <th id="study-time">학습시간</th>
+        <td headers="study-time">09:00 ~ 17:00 ( 28시간 )</td>
+        <th id="difficulty">난이도</th>
+        <td headers="difficulty">초급</td>
+      </tr>
+      <tr>
+        <th id="educational-expenses">교육비 지원</th>
+        <td headers="educational-expenses">고용보험 비환급</td>
+        <th id="evaluation-items">평가항목</th>
+        <td headers="evaluation-items">출석률 100%</td>
+      </tr>
+      <tr>
+        <th id="completion-criteria">수료기준</th>
+        <td headers="completion-criteria">총점 80점 이상시 수료</td>
+        <th id="class-capacity">정원</th>
+        <td headers="class-capacity">24 명</td>
+      </tr>
+      <tr>
+        <th id="learning-textbook">교재정보</th>
+        <td colspan="3" headers="learning-textbook">
+          입문자를 위한 Git과 HTML&CSS<br />
+          HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)
+        </td>
+      </tr>
     </table>
-    <!-- border : 모서리 옵션  이제  CSS 로 작업함 -->
-    <h3>테이블 기본 요소</h3>
+    <hr />
+    <h2>테이블 기본 요소</h2>
     <table>
-      <!-- Cpation : 테이블 제목 요소 -->
       <caption>
         멋쟁이 사자처럼 프론트엔드 스쿨 13기 스탭
       </caption>
@@ -58,9 +61,7 @@
         <col />
         <col span="2" />
         <col />
-        <!-- 콜그룹 : 열그룹 -->
       </colgroup>
-      <!-- tr : 테이블 행 , th : 테이블 제목셀 , td : 테이블 데이타 -->
       <thead>
         <tr>
           <th scope="col">번호</th>
@@ -69,7 +70,6 @@
           <th scope="col">운영진</th>
         </tr>
       </thead>
-      <!-- tfoot 어디에 위치시키던 맨 밑에 출력 됌 -->
       <tfoot>
         <tr>
           <th scope="row">인원수</th>
